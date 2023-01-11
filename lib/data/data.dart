@@ -17,11 +17,6 @@ List<Doctor> doctors = [
     jobTitle: 'Dietitian',
   ),
   Doctor(
-    name: 'Dave Whyte',
-    imgUrl: 'imgs/4.png',
-    jobTitle: 'Genetic counselor',
-  ),
-  Doctor(
     name: 'Peter Trug',
     imgUrl: 'imgs/5.png',
     jobTitle: 'Medical physicist',
@@ -48,17 +43,17 @@ List<Doctor> doctors = [
   ),
   Doctor(
     name: 'Stella Dav',
-    imgUrl: 'imgs/10.png',
+    imgUrl: 'imgs/10.jpg',
     jobTitle: 'Surgical technologist',
   ),
   Doctor(
     name: 'Gary Yale',
-    imgUrl: 'imgs/11.png',
+    imgUrl: 'imgs/11.jpg',
     jobTitle: 'Respiratory therapist',
   ),
   Doctor(
     name: 'Theo Sandra',
-    imgUrl: 'imgs/12.png',
+    imgUrl: 'imgs/12.jpg',
     jobTitle: 'Perioperative nurse',
   ),
 ];
