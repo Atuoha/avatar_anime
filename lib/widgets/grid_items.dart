@@ -19,7 +19,7 @@ class _GridItemsState extends State<GridItems> {
   addToFav(Doctor doctor) {
     if (!favDoctors.contains(doctor)) {
       setState(() {
-        favDoctors.insert(0, doctor);
+        favDoctors.add(doctor);
         doctors.remove(doctor);
       });
     }
@@ -28,7 +28,7 @@ class _GridItemsState extends State<GridItems> {
   removeFromFav(Doctor doctor) {
     setState(() {
       favDoctors.remove(doctor);
-      doctors.add(doctor);
+      doctors.insert(0,doctor);
     });
   }
 
@@ -75,11 +75,13 @@ class _GridItemsState extends State<GridItems> {
                       itemCount: favDoctors.length,
                       itemBuilder: (context, index) => GestureDetector(
                         onTap: () => removeFromFav(favDoctors[index]),
-                        child: DoctorCard(
+                        child: LocalHero(
+                          tag: favDoctors[index].name,
+                          child:  DoctorCard(
                           doctor: favDoctors[index],
                           smallCard: true,
                         ),
-                      ),
+                      ),),
                     ),
                   )
                 ],
